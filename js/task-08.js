@@ -4,10 +4,12 @@ form.addEventListener('submit', handleSubmit);
 function handleSubmit(event) {
     event.preventDefault();
     const { elements: { email, password }} = event.currentTarget;
+    const inputForm = { email: email.value, password: password.value };
+
     if ( email.value === '' || password.value === '') {
-        alert(`Всі поля повинні бути заповнені`)
+        return alert(`Всі поля повинні бути заповнені`)
 
     }
-    console.log ("email:" `${email.value}`, "password:" `${password.value}` );
+    console.log (inputForm);
     event.currentTarget.reset();
 }
