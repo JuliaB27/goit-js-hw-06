@@ -15,5 +15,5 @@ function changeColor() {
     const currentColor = getRandomHexColor();
     textColor.textContent = currentColor;
     backgroundColor.style.background = `${currentColor}`;
+    
 }
-console.log(getRandomHexColor())
